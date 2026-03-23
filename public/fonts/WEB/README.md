@@ -34,7 +34,7 @@ font-family: Satoshi-Variable;
 font-family: Satoshi-VariableItalic;
 
 ```
-## 6. (Optional)
+## 6. (Optional option2)
 Use `font-variation-settings` rule to controll axes of variable fonts:
 wght 900.0
 
