@@ -9,7 +9,7 @@ function Hotelcard() {
   const isSmall = useMediaQuery({ query: "(max-width: 640px)" });
   const { trip } = useContext(LogInContext);
   const city = trip?.tripData?.[0]?.location;
-  const hotels = trip?.tripData?.[0]?.hotels;
+  const hotels = trip?.tripData?.hotels;
 
   const { holetsRef } = useRefContext();
 

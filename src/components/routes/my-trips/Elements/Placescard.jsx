@@ -9,8 +9,8 @@ function Placescard() {
   // const isSmall = useMediaQuery({ query: "(max-width: 640px)" });
 
   const { trip } = useContext(LogInContext);
-  const itinerary = trip?.tripData?.[0]?.itinerary;
-  const city = trip?.tripData?.[0]?.location;
+  const itinerary = trip?.tripData?.itinerary;
+  const city = trip?.tripData?.location;
 
   const { placesRef } = useRefContext();
 
@@ -36,7 +36,7 @@ function Placescard() {
               </h4>
             </div>
             <div className="cards flex flex-col md:flex-row flex-wrap gap-5">
-              {day.schedule.map((place, idx) => {
+              {day.activities.map((place, idx) => {
                 return (
                   <div key={idx} className="md:w-[48%]">
                     <PlaceCards className="place-card" place={place} />

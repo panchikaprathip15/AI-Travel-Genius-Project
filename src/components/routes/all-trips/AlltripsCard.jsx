@@ -6,7 +6,7 @@ const AlltripsCard = ({ trip }) => {
   const [photos, setPhotos] = useState("");
   const [Url, setUrl] = useState("");
 
-  const city = trip?.tripData?.location;
+const city = trip?.tripData?.[0]?.location;
 
   
 
@@ -25,7 +25,6 @@ const AlltripsCard = ({ trip }) => {
   useEffect(() => {
     trip && getCityInfo();
   }, [trip]);
-
   useEffect(() => {
     const url = PHOTO_URL.replace("{replace}", photos);
     setUrl(url);
